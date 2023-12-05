@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.nav_container {
+    position: relative;
+}
+
+header {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    border-bottom: 1px solid #d3c5c5;
+    z-index: 900;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 4rem;
+}
+
+nav .anchor {
+    margin: 0 2.5rem;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+nav .anchor.contact {
+    display: none;
+    margin: 0 2.5rem;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+nav a:hover {
+    color: #0035e4;
+}
+
+header .nav-btn {
+    padding: 5px 10px;
+    cursor: pointer;
+    background: #0A1A83;
+    color: #fff;
+    border: none;
+    outline: none;
+    display: none;
+    opacity: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    z-index: 999;
+    margin: 0;
+}
+
+header div,
+nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+header .about {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+header .about:hover {
+    color: #0035e4;
+}
+
+header nav ul {
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    list-style: none;
+}
+
+header .submenu {
+    background-color: #fff;
+    width: 230px;
+    padding: 30px 16px 20px 16px;
+    border: 1px solid rgb(185, 180, 180);
+    border-radius: 4px;
+}
+
+header .submenu li a {
+    text-decoration: none;
+    color: grey;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.35s ease-in-out;
+}
+
+header .submenu li {
+    margin-bottom: 30px;
+}
+
+header .submenu li a:hover {
+    color: #0035e4;
+}
+
+.user-box {
+    background-color: #0A1A83;
+    padding: 10px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 920;
+}
+
+.user-box h4 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    margin: 0;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    nav .anchor.contact {
+        display: inline;
+        margin: 0 2.5rem;
+        color: black;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 17px;
+    }
+    
+
+    header {
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 20px;
+    }
+
+    .nav_title {
+        width: 60px;
+        height: 50px;
+        object-fit: cover;
+        z-index: 9999;
+    }
+
+    header nav {
+        position: fixed;
+        top: 5rem;
+        padding: 3rem 0.5rem;
+        left: 0;
+        height: 100%;
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 3rem;
+        background-color: white;
+        color: black;
+        transition: 1s;
+        transform: translateX(-150vh);
+    }
+
+    .homee {
+        display: block;
+    }
+
+    header .responsive_nav {
+        transform: none;
+    }
+
+    nav .nav-close-btn {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: 1.5rem;
+        padding: 0.3rem 0.5rem 0.1rem 0.5rem;
+    }
+
+    nav a {
+        font-size: 1.3rem;
+        color: #fff;
+        margin-bottom: 5rem;
+    }
+}
