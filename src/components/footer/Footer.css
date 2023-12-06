@@ -1,0 +1,24 @@
+
+.footer-container {
+    padding: 0 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-container p {
+    font-size: 0.88rem;
+}
+
+.footer-container .right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.footer-container .right img {
+    width: 25px;
+    height: 25px;
+}

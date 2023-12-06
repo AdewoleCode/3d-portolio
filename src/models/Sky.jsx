@@ -9,12 +9,21 @@ Title: FREE - SkyBox In The Cloud
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import SkyScene from "../assets/3d/sky.glb"
+import { useFrame } from "@react-three/fiber";
 
 
-const Sky =(props) => {
+const Sky = ({ isRotating, ...props }) => {
   const { nodes, materials } = useGLTF(SkyScene);
+  const skyRef = useRef()
+
+  useFrame((_, delta) => {
+    if (isRotating) {
+      skyRef.current.rotation.y += 0.5 * delta
+    }
+  })
+
   return (
-    <group {...props} >
+    <group {...props} ref={skyRef} >
       <group scale={0.01}>
         <mesh
           castShadow

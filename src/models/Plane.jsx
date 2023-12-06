@@ -6,7 +6,7 @@ Source: https://sketchfab.com/3d-models/stylized-ww1-plane-c4edeb0e410f46e8a4db3
 Title: Stylized WW1 Plane
 */
 
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 
 import PlaneScene from "../assets/3d/plane.glb"
@@ -15,6 +15,17 @@ const Plane = ({isRotating, ...props}) => {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF(PlaneScene);
   const { actions } = useAnimations(animations, group);
+
+  useEffect(() => {
+    console.log(isRotating);
+    if (isRotating){
+      actions['Take 001'].play()
+    } else {
+      actions['Take 001'].stop()
+    }
+  }, [actions, isRotating])
+
+
   return (
     <group ref={group} {...props} >
       <group name="Sketchfab_Scene">
@@ -2197,6 +2208,6 @@ const Plane = ({isRotating, ...props}) => {
   );
 }
 
-useGLTF.preload("/plane.glb");
+// useGLTF.preload("/plane.glb");
 
 export default Plane

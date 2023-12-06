@@ -9,17 +9,22 @@
     position: relative;
 }
 
+.nav_container header .logo-title{
+    font-size: 1.3rem;
+    color: rgb(74, 74, 189) ;
+}
+
 header {
     width: 100%;
     margin: 0 auto;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     border-bottom: 1px solid #d3c5c5;
     z-index: 900;
     position: fixed;
     top: 0;
     left: 0;
     background-color: #fff;
-    height: 70px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: space-between;

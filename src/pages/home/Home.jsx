@@ -6,10 +6,12 @@ import Island from '../../models/Island'
 import Sky from '../../models/Sky'
 import Bird from '../../models/Bird'
 import Plane from '../../models/Plane'
+import HomeInfo from '../../components/homeInfo/HomeInfo'
 
 const Home = () => {
 
     const [isRotating, setIsRotating] = useState(false)
+    const [currentStage, setCurrentStage] = useState(1)
 
     const adjustIslandForScreenSize = () => {
         let screenScale = null
@@ -44,6 +46,11 @@ const Home = () => {
 
     return (
         <section className='home-container'>
+            <div className="pop-up-container">
+                {
+                    currentStage && <HomeInfo currentStage={currentStage} />
+                }
+            </div>
             <Canvas
                 className={isRotating ? "home-canvas-grab" : "home-canvas"}
                 camera={{ near: 0.1, far: 1000 }}
@@ -53,19 +60,21 @@ const Home = () => {
                     <ambientLight intensity={1} />
                     <spotLight />
                     <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={2} />
-                    <Bird />
-                    <Sky />
+                    <Sky isRotating={isRotating} />
+                    {/* <Bird /> */}
                     <Island
                         position={islandPosition}
                         scale={islandScale}
                         rotation={IslandRotation}
                         isRotating={isRotating}
                         setIsRotating={setIsRotating}
+                        setCurrentStage={setCurrentStage}
                     />
                     <Plane
                         position={planePosition}
                         scale={planeScale}
                         rotation={[0, 20, 0]}
+                        isRotating={isRotating}
                     />
                 </Suspense>
             </Canvas>

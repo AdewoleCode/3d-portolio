@@ -19,7 +19,7 @@ const NavigationBar = () => {
 
             <header>
                 <Link to="/">
-                   <h2>Adewole</h2>
+                   <h2 className='logo-title'>Adewole</h2>
                 </Link>
 
                 <nav ref={navRef}>

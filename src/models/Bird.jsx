@@ -6,17 +6,51 @@ Source: https://sketchfab.com/3d-models/phoenix-bird-844ba0cf144a413ea92c779f189
 Title: phoenix bird
 */
 
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 
 import BirdScene from "../assets/3d/bird.glb"
+import { useFrame } from "@react-three/fiber";
 
 const Bird = (props) => {
-  const group = useRef();
+  const birdRef = useRef();
   const { nodes, materials, animations } = useGLTF(BirdScene);
-  const { actions } = useAnimations(animations, group);
+  const { actions } = useAnimations(animations, birdRef);
+
+  // to activate the specific animation inbuilt with the model. 
+  useEffect(() => {
+    actions['Take 001'].play()
+  }, [])
+
+  // triggers for every frame. basically every second an animation is working on our canvas.
+  useFrame(({ clock, camera }) => {
+    // update the y postion to simulate bird-like motion using a sine-wave
+    birdRef.current.position.y = Math.sin(clock.elapsedTime) * 0.2 + 2
+
+    // check if the bird has reached a certain endpoint relative to the camera
+    if (birdRef.current.position.x > camera.position.x + 0) {
+      // if it has, change direction to backward and rotate the bird 180deg on the y-axis
+      birdRef.current.position.y = Math.PI
+      // if it hasnt, keep goin forward and reset bird rotation to 0
+    } else if (birdRef.current.position.x < camera.position.x - 10) {
+      birdRef.current.position.y = 0
+    }
+
+    // update the z and x postion based on the direction
+    if (birdRef.current.rotation.y === 0){
+
+      // moving forward
+      birdRef.current.position.x += 0.01 
+      birdRef.current.position.z -= 0.01 
+    } else {
+      // moving backward
+      birdRef.current.position.x -= 0.01 
+      birdRef.current.position.z += 0.01 
+    }
+  })
+
   return (
-    <group ref={group} {...props} >
+    <group ref={birdRef} {...props} >
       <group name="Sketchfab_Scene">
         <group
           name="Sketchfab_model"

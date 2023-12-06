@@ -1,0 +1,46 @@
+.home-info-container {
+    padding: 1rem;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.home-info-container.content-box {
+    text-align: center;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.home-info-container .content-box p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgb(67, 67, 194);
+    margin-bottom: 0.5rem;
+}
+
+.home-info-container .content-box button{
+    background-color:rgb(111, 111, 223) ;
+    padding: 0.4rem 0.7rem;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+.home-info-container .content-box button:hover {
+    background-color: rgb(42, 42, 168);
+}
+
+.home-info-container h1 {
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 500;
+    color: rgb(67, 67, 194);
+}
+
+.home-info-container span {
+    font-size: 1rem;
+    font-weight: 700;
+}
