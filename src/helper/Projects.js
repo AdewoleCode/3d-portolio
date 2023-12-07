@@ -8,7 +8,10 @@ import spooky from "../assets/project-img/spooky.png"
 import bas from "../assets/project-img/bas.png"
 import brit from "../assets/project-img/brit.png"
 import freelanceMedic from "../assets/project-img/freelance-medic.png"
-import britLandBanking from "../assets/project-img/brit-land.png" 
+import britLandBanking from "../assets/project-img/brit-land.png"
+import bonHotel from "../assets/project-img/bon-hotel.png"
+import digitalLanding from "../assets/project-img/digital-landing.png"
+import openEnterprise from "../assets/project-img/open-enterprise.png"
 // import ART1 from "../assets/arrMethod.png"
 // import ART2 from "../assets/restFul.png"
 // import ART3 from "../assets/started-express.png"
@@ -19,16 +22,6 @@ import britLandBanking from "../assets/project-img/brit-land.png"
 
 
 export const projectsArray = [
-
-  // {
-  //   // id: "01",
-  //   projectName: "Freelance Medic",
-  //   imgUrl: IMG10,
-  //   desc: "Get connected with top-rated medical facilities across the country, with a regularly updated database, so you can find he right asignment",
-  //   webUrl: "https://freelance-medic.onrender.com",
-  //   gitHub: "https://freelance-medic.onrender.com",
-  //   stacks: ["ReactJS", "Redux-Toolkit"],
-  // },
   {
     id: 0,
     projectName: "Brit Properties LTD",
@@ -36,7 +29,7 @@ export const projectsArray = [
     desc: "Official website for Brit Properties Nigeria Ltd, a real estate company primarily based in lagos.",
     webUrl: "https://brit-react.onrender.com/",
     gitHub: "https://brit-react.onrender.com/",
-    stacks: ["ReactJS", "NodeJS", "ExpressJS", "MongoDB", "Django"],
+    stacks: ["ReactJS", "Firebase", "Emailjs", "React-Carousel", "Django"],
   },
   {
     id: 1,
@@ -63,7 +56,7 @@ export const projectsArray = [
     desc: "Get connected with top-rated medical facilities across the country, with a regularly updated database, so you can find he right asignment",
     webUrl: "https://freelance-medic.onrender.com",
     gitHub: "https://freelance-medic.onrender.com",
-    stacks: ["ReactJS", "Redux-Toolkit"],
+    stacks: ["ReactJS", "Redux-Toolkit", "React-reveal"],
   },
   {
     id: 4,
@@ -81,7 +74,7 @@ export const projectsArray = [
     desc: "Official website for Brit Land Banking, a subsidiary of Brit Properties Nigeria Limited.",
     webUrl: "https://brit-land-banking.onrender.com/",
     gitHub: "https://brit-land-banking.onrender.com/",
-    stacks: ["viteJS", "NodeJS", "EmailJS"],
+    stacks: ["ViteJS", "EmailJS", "React-reveal"]
   },
   {
     id: 6,
@@ -119,23 +112,33 @@ export const projectsArray = [
     gitHub: "https://github.com/AdewoleCode/Ecommerce-project",
     stacks: ["ReactJS", "Redux Toolkit", "Firebase"],
   },
-  // {
-  //   // id: "03",
-  //   projectName: "Travel Naija ",
-  //   imgUrl: IMG3,
-  //   desc: "A Landing page designed for a traveling agency company, page also features light and dark mode.",
-  //   webUrl: "https://travelnaija.netlify.app/",
-  //   gitHub: "https://github.com/Robinhood1712/travelNaija",
-  //   stacks: ["html", "css", "javascript"],
-  // },
-  // {
-  //   projectName: "previous portfolio website",
-  //   imgUrl: IMGPORT,
-  //   desc: "previous porfolio webpage that contains some of my old projects",
-  //   webUrl: "https://adewole-port.netlify.app/",
-  //   gitHub: "https://github.com/Robinhood1712/",
-  //   stacks: ["html", "css", "javascript"],
-  // },
+  {
+    id: 10,
+    projectName: "Bon Hotel",
+    imgUrl: bonHotel,
+    desc: "A landing page for Bon Hotel",
+    webUrl: "https://maltimartstore.netlify.app",
+    gitHub: "https://github.com/AdewoleCode/Ecommerce-project",
+    stacks: ["ViteJS"],
+  },
+  {
+    id: 11,
+    projectName: "Digital Landing",
+    imgUrl: digitalLanding,
+    desc: "A landing page for Digital Landing",
+    webUrl: "https://maltimartstore.netlify.app",
+    gitHub: "https://github.com/AdewoleCode/Ecommerce-project",
+    stacks: ["ViteJS"],
+  },
+  {
+    id: 12,
+    projectName: "Open Enterprise",
+    imgUrl: openEnterprise,
+    desc: "A landing page for Open Enterprise",
+    webUrl: "https://maltimartstore.netlify.app",
+    gitHub: "https://github.com/AdewoleCode/Ecommerce-project",
+    stacks: ["ViteJS"],
+  },
 ];
 
 

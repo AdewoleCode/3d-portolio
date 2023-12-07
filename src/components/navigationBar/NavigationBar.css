@@ -9,9 +9,9 @@
     position: relative;
 }
 
-.nav_container header .logo-title{
+.nav_container header .logo-title {
     font-size: 1.3rem;
-    color: rgb(74, 74, 189) ;
+    color: rgb(74, 74, 189);
 }
 
 header {
@@ -133,9 +133,7 @@ header .submenu li a:hover {
     margin: 0;
 }
 
-
 @media only screen and (max-width: 800px) {
-
     nav .anchor.contact {
         display: inline;
         margin: 0 2.5rem;
@@ -144,7 +142,6 @@ header .submenu li a:hover {
         font-weight: 600;
         font-size: 17px;
     }
-    
 
     header {
         align-items: center;

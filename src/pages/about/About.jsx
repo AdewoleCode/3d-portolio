@@ -68,7 +68,7 @@ const About = () => {
       <div className="btn-box">
         <h4>Have a project in mind? Reach Out. <br /> let's build something together.</h4>
         <Link to="/contact">
-          <button>Connect</button>
+          <button>How far?</button>
         </Link>
       </div>
     </div>

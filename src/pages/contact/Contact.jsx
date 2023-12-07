@@ -9,10 +9,9 @@ import Fox from '../../models/Fox';
 // todo
 // install react-toastify and emailjs
 // configure emailjs
-// add 3 landing pages you built to list of portfolio
 // make all pages responsive across all devices
 // host
-// maybe revamp the about section. maybe.
+// add animations with react-reveal
 
 const Contact = () => {
   const formRef = useRef();
