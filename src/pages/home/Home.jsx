@@ -34,15 +34,14 @@ const Home = () => {
             screenScale = [1.5, 1.5, 1.5]
             screenPosition = [0, -1.5, 0]
         } else {
-            screenScale = [3, 3, 3]
-            screenPosition = [0, -4, -6]
+            screenScale = [4, 3, 4]
+            screenPosition = [0, -5.5, -6]
         }
         return [screenPosition, screenScale]
     }
 
     const [islandPosition, islandScale, IslandRotation] = adjustIslandForScreenSize()
     const [planePosition, planeScale] = adjustPlaneForScreenSize()
-
 
     return (
         <section className='home-container'>
@@ -61,7 +60,7 @@ const Home = () => {
                     <spotLight />
                     <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={2} />
                     <Sky isRotating={isRotating} />
-                    {/* <Bird /> */}
+                    <Bird />
                     <Island
                         position={islandPosition}
                         scale={islandScale}

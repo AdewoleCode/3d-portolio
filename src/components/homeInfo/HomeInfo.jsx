@@ -13,26 +13,41 @@ const ContentBox = ({ text, link, btnText }) => {
     )
 }
 
-
 const renderContent = {
     1: (
-        <h1>Hi, I'm <span>Ademola</span>, a fullstack and creative web developer</h1>
+        <h1>
+            Hi, I'm <span>Ademola</span>, a fullstack and creative web developer
+        </h1>
     ),
     2: (
-        <ContentBox text="Over 3 years of experience, working with various, modern technologies" link="/about" btnText="About Me" />
+        <ContentBox
+            text="Over 3 years of experience, working with various, modern technologies"
+            link="/about"
+            btnText="About Me"
+        />
     ),
     3: (
-        <ContentBox text="Some of the projects i've worked on" link="/project" btnText="Visit My Portfolio" />
+        <ContentBox
+            text="Some of the projects i've worked on"
+            link="/projects"
+            btnText="Visit My Portfolio"
+        />
     ),
     4: (
-        <ContentBox text="Need a project done or need a dev to join your team?" link="/contact" btnText="Let's Talk" />
+        <ContentBox
+            text="Need a project done or need a talented, creative developer to join your team?"
+            link="/contact"
+            btnText="Let's Talk"
+        />
     )
 }
 
 const HomeInfo = ({ currentStage }) => {
 
     return (
-        <div className={currentStage === 1 ? "home-info-container" : "home-info-container content-box"}>
+        <div
+            className={currentStage === 1 ? "home-info-container" : "home-info-container content-box"}
+        >
             {
                 renderContent[currentStage] || null
             }
