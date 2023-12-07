@@ -1,6 +1,6 @@
 import React from 'react'
 import man from "../../assets/images/man.png"
-import "./about.css"
+import "./About.css"
 import { Link } from "react-router-dom"
 import css from "../../assets/icons/css.svg"
 import git from "../../assets/icons/git.svg"
@@ -68,7 +68,7 @@ const About = () => {
       <div className="btn-box">
         <h4>Have a project in mind? Reach Out. <br /> let's build something together.</h4>
         <Link to="/contact">
-          <button>How far?</button>
+          <button>How </button>
         </Link>
       </div>
     </div>
