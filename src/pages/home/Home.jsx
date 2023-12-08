@@ -16,15 +16,15 @@ const Home = () => {
     const audioRef = useRef(new Audio(godspeed))
     audioRef.current.volume = 0.6
     audioRef.current.loop = true
-    const [isPlayingMusic, setIsPlayingMusic] = useState(true)
+    const [isPlayingMusic, setIsPlayingMusic] = useState(false)
 
     useEffect(() => {
-        if (!isPlayingMusic) {
-            audioRef.current.pause()
+        if (isPlayingMusic) {
+            audioRef.current.play()
         }
 
         return () => {
-            audioRef.current.play()
+            audioRef.current.pause()
         }
     }, [isPlayingMusic])
 

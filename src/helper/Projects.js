@@ -1,4 +1,3 @@
-// import React from 'react'
 import crypto from "../assets/project-img/crypto.png"
 import multimart from "../assets/project-img/maltimart.png"
 import travel from "../assets/project-img/travel.png"
@@ -12,13 +11,6 @@ import britLandBanking from "../assets/project-img/brit-land.png"
 import bonHotel from "../assets/project-img/bon-hotel.png"
 import digitalLanding from "../assets/project-img/digital-landing.png"
 import openEnterprise from "../assets/project-img/open-enterprise.png"
-// import ART1 from "../assets/arrMethod.png"
-// import ART2 from "../assets/restFul.png"
-// import ART3 from "../assets/started-express.png"
-// import ART4 from "../assets/started-node.png"
-// import ART5 from "../assets/scope.png"
-
-
 
 
 export const projectsArray = [

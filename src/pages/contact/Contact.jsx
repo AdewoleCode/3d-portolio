@@ -29,38 +29,55 @@ const toastOptions = {
 const Contact = () => {
   const formRef = useRef();
   const [currentAnimation, setCurrentAnimation] = useState('idle')
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [msg, setMsg] = useState("")
+  const [isloading, setIsloading] = useState(false)
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-    setIsloading(true)
 
-    setCurrentAnimation('hit')
-
-    emailjs.sendForm("service_typ0pbh", "template_bzf630o", form.current, "yZYjvSaCnhyflKnLl")
-      .then((result) => {
-        setIsloading(false)
-        console.log(result.text);
-        toast.success("message sent!", toastOptions)
-      }, (error) => {
-        setIsloading(false)
-        console.log(error.text);
-        setCurrentAnimation('idle')
-        toast.error('something went wrong!', toastOptions)
-      });
-    e.target.reset();
-    setTimeout(() => {
-      setCurrentAnimation('idle')
-    }, 3000);
+  const validateForm = () => {
+    if (name === "") {
+      toast.error("please enter your name", toastOptions);
+      return false;
+    } else if (email === "" || email.length <= 6) {
+      toast.error("please enter a valid email address.", toastOptions);
+      return false;
+    } else if (msg === "") {
+      toast.error("please enter your mesage", toastOptions);
+      return false;
+    }
+    return true;
   };
 
 
-  const [form, setform] = useState({ name: "", email: "", message: "" })
-  const [isloading, setIsloading] = useState(false)
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-  const handleFormChange = (e) => {
-    e.preventDefault()
-    setform({ ...form, [e.target.name]: e.target.value })
-  }
+    if (validateForm()) {
+      setIsloading(true)
+
+      setCurrentAnimation('hit')
+
+      emailjs.sendForm("service_typ0pbh", "template_bzf630o", form.current, "yZYjvSaCnhyflKnLl")
+        .then((result) => {
+          setIsloading(false)
+          console.log(result.text);
+          toast.success("message sent!", toastOptions)
+          name = ""
+          email = ""
+          message = ""
+        }, (error) => {
+          setIsloading(false)
+          console.log(error.text);
+          setCurrentAnimation('idle')
+          toast.error('something went wrong!', toastOptions)
+        });
+    }
+
+    setTimeout(() => {
+      setCurrentAnimation('idle')
+    }, 2000);
+  };
 
   const handleFocus = () => {
     setCurrentAnimation('walk')
@@ -82,14 +99,12 @@ const Contact = () => {
                 <div className="form-group">
                   <h3>Name</h3>
                   <input
+                    onChange={(e) => setName(e.target.value)}
                     type="text"
                     name="user_name"
                     placeholder='Enter Your Name'
-                    // value={form.name}
-                    onChange={handleFormChange}
                     onFocus={handleFocus}
                     onBlur={handleBlur}
-                    required
                   />
                 </div>
                 <div className="form-group">
@@ -98,19 +113,15 @@ const Contact = () => {
                     type="email"
                     name="user_email"
                     placeholder='Enter Your Email'
-                    // value={form.email}
-                    onChange={handleFormChange}
+                    onChange={(e) => setEmail(e.target.value)}
                     onFocus={handleFocus}
                     onBlur={handleBlur}
-                    required
                   />
                 </div>
                 <div className="form-group">
                   <h3>Text Message</h3>
                   <textarea
-                    // value={form.message}
-                    required
-                    onChange={handleFormChange}
+                    onChange={(e) => setMsg(e.target.value)}
                     onFocus={handleFocus}
                     onBlur={handleBlur}
                     type="text"
@@ -120,7 +131,7 @@ const Contact = () => {
                 </div>
                 <button
                   onFocus={handleFocus}
-                  type='submit'
+                  // type='submit'
                   onClick={sendEmail}
                   className='contact-btn'
                   disabled={isloading}

@@ -7,7 +7,6 @@ import NavigationBar from "./components/navigationBar/NavigationBar";
 import ProjectDetails from "./pages/projectDetails/projectDetails";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-// import Footer from "./components/footer/Footer";
 
 function App() {
 
@@ -21,7 +20,6 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects/:id" element={<ProjectDetails />} />
-          {/* <Route path="/project/:id" element={<PortfolioDes />} /> */}
         </Routes>
       </BrowserRouter>
       <ToastContainer />
