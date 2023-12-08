@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from 'react'
+import React, { Suspense, useState, useEffect, useRef } from 'react'
 import "./Home.css"
 import { Canvas } from "@react-three/fiber"
 import Spinner from "../../components/spinner/Spinner"
@@ -7,8 +7,26 @@ import Sky from '../../models/Sky'
 import Bird from '../../models/Bird'
 import Plane from '../../models/Plane'
 import HomeInfo from '../../components/homeInfo/HomeInfo'
+import godspeed from "../../assets/godspeed.mp3"
+import soundOn from "../../assets/icons/soundon.png"
+import soundOff from "../../assets/icons/soundoff.png"
 
 const Home = () => {
+
+    const audioRef = useRef(new Audio(godspeed))
+    audioRef.current.volume = 0.6
+    audioRef.current.loop = true
+    const [isPlayingMusic, setIsPlayingMusic] = useState(true)
+
+    useEffect(() => {
+        if (!isPlayingMusic) {
+            audioRef.current.pause()
+        }
+
+        return () => {
+            audioRef.current.play()
+        }
+    }, [isPlayingMusic])
 
     const [isRotating, setIsRotating] = useState(false)
     const [currentStage, setCurrentStage] = useState(1)
@@ -20,9 +38,11 @@ const Home = () => {
 
         if (window.innerWidth < 768) {
             screenScale = [0.9, 0.9, 0.9]
+        } else if (window.innerWidth < 500) {
+            screenScale = [0.7, 0.7, 0.7]
         } else {
-            screenScale = [1, 1, 1]
-        }
+        } screenScale = [1, 1, 1]
+
         return [screenPosition, screenScale, rotation]
     }
 
@@ -77,6 +97,13 @@ const Home = () => {
                     />
                 </Suspense>
             </Canvas>
+            <div className='music-container'>
+                <img
+                    onClick={() => setIsPlayingMusic(!isPlayingMusic)}
+                    src={isPlayingMusic ? soundOn : soundOff}
+                    alt="music"
+                />
+            </div>
         </section>
     )
 }

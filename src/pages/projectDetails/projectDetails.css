@@ -4,10 +4,11 @@
 
 #description-section .description-container {
     margin-top: 4rem;
-    padding: 2rem;
+    padding: 2rem 0 0.5rem 0;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    flex-wrap: wrap;
     gap: 2rem;
 }
 
@@ -71,7 +72,6 @@
 #description-section .description-container .proj-image-box .description-cta .btn-primary:hover{
     background-color: #122330;
     color: #fff;
-    /* border: 1px solid #fff; */
 }
 
 
@@ -114,7 +114,45 @@
     color: rgb(145, 162, 194);
 }
 
-:root {
+#description-section .btn-back {
+    display: flex;
+    justify-content: center;
+}
+
+#description-section .des-btn  {
+    display: block;
+    margin: 2rem auto 0 auto;
+    font-size: 40px;
+    display: inline-block;
+    color: #1f1f38;
+    padding: 0.4rem 0.9rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid #1f1f38;
+    transition: all 40ms ease;
+}
+
+#description-section .des-btn:hover {
+    background: #fff;
+    color: #4db5ff;
+    border-color: transparent;
+    border: 1px solid #4db5ff;
+}
+
+@media only screen and (max-width: 800px) {
+    #description-section .description-container .proj-image-box .portfolio-image {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #description-section .description-container .proj-stacks {
+        width: 95%;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+}
+
+/* :root {
     --color-bg: #1f1f38;
     --color-bg-variant: #2c2c6c;
     --color-primary: #4db5ff;
@@ -127,4 +165,4 @@
     --container-width-lg: 75%;
     --container-width-md: 86%;
     --container-width-sm: 90%;
-}
+} */

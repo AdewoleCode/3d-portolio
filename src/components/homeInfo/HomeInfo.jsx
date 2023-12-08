@@ -16,7 +16,7 @@ const ContentBox = ({ text, link, btnText }) => {
 const renderContent = {
     1: (
         <h1>
-            Hi, I'm <span>Ademola</span>, a fullstack and creative web developer
+            Hi, I'm <span>Ade</span>, a creative fullstack web developer
         </h1>
     ),
     2: (

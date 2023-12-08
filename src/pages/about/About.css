@@ -13,6 +13,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    flex-wrap: wrap;
     gap: 2rem;
 }
 
@@ -63,7 +64,7 @@
     padding: 1rem;
 }
 
-.about-container .bottom .skills-container img{
+.about-container .bottom .skills-container img {
     padding: 0.8rem;
     background-color: #fff;
     transition: 0.3s all ease;
@@ -80,6 +81,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 4rem;
     margin-top: 2rem;
 }
@@ -107,4 +109,33 @@
 .about-container .btn-box button:hover {
     background-color: #122330;
     color: #fff;
+}
+
+@media only screen and (max-width: 800px) {
+    .about-container .bottom .skills-container {
+        width: 100%;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+
+    .about-container .right {
+        width: 500px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .about-container .right {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .about-container .left {
+        width: 97%;
+        margin: 0 auto;
+    }
+
+    .about-container .btn-box {
+        padding: 0 1.5rem;
+    }
+
 }

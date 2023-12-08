@@ -17,6 +17,8 @@ import nodejs from "../../assets/icons/nodejs.svg"
 import javascript from "../../assets/icons/javascript.svg"
 import redux from "../../assets/icons/redux.svg"
 import react from "../../assets/icons/react.svg"
+import { Fade } from 'react-reveal'
+
 
 
 
@@ -27,49 +29,59 @@ const About = () => {
 
       <div className="top">
 
-        <div className="left">
-          <img src={man} alt="man" />
-        </div>
-        <div className="right">
-          {/* <h3>ABOUT ME!</h3> */}
-          <p className='text-first'>
-            I’m an experienced software developer with over 3 year of professional programming experience.
-          </p>
-          <p className='text-second'>
-            I am a passionate self-learner with a great eye for nice,
-            modern UI designs. I enjoy building projects using various technologies that helps with scalabilty
-          </p>
-          <p className='text-third'>
-            As a developer, I enjoy bridging the gap between functionality and design. My goal is to always build web applications that are efficient while providing quality user experiences.
-            Also, I am highly responsive to client needs and committed to helping people realize their vision.
-          </p>
-        </div>
+        <Fade left duration={2000}>
+          <div className="left">
+            <img src={man} alt="man" />
+          </div>
+        </Fade>
+        <Fade right duration={2000}>
+          <div className="right">
+            {/* <h3>ABOUT ME!</h3> */}
+            <p className='text-first'>
+              I’m an experienced software developer with over 3 year of professional programming experience.
+            </p>
+            <p className='text-second'>
+              I am a passionate self-learner with a great eye for nice,
+              modern UI designs. I enjoy building projects using various technologies that helps with scalabilty
+            </p>
+            <p className='text-third'>
+              As a developer, I enjoy bridging the gap between functionality and design. My goal is to always build web applications that are efficient while providing quality user experiences.
+              Also, I am highly responsive to client needs and committed to helping people realize their vision.
+            </p>
+          </div>
+        </Fade>
       </div>
       <div className="bottom">
         <h3 className='heading-skills'>My Skills</h3>
-        <div className="skills-container">
-          <img src={html} alt="html" />
-          <img src={css} alt="css" />
-          <img src={javascript} alt="javascript" />
-          <img src={typescript} alt="typescript" />
-          <img src={nextJs} alt="nextjs" />
-          <img src={tailwind} alt="tailwind" />
-          <img src={nodejs} alt="nodejs" />
-          <img src={mui} alt="mui" />
-          <img src={express} alt="express" />
-          <img src={mongodb} alt="mongodb" />
-          <img src={saas} alt="saas" />
-          <img src={redux} alt="redux" />
-          <img src={git} alt="git" />
-          <img src={github} alt="github" />
-          <img src={react} alt="react" />
-        </div>
+        <Fade bottom duration={3000}>
+          <div className="skills-container">
+            <img src={html} alt="html" />
+            <img src={css} alt="css" />
+            <img src={javascript} alt="javascript" />
+            <img src={typescript} alt="typescript" />
+            <img src={nextJs} alt="nextjs" />
+            <img src={tailwind} alt="tailwind" />
+            <img src={nodejs} alt="nodejs" />
+            <img src={mui} alt="mui" />
+            <img src={express} alt="express" />
+            <img src={mongodb} alt="mongodb" />
+            <img src={saas} alt="saas" />
+            <img src={redux} alt="redux" />
+            <img src={git} alt="git" />
+            <img src={github} alt="github" />
+            <img src={react} alt="react" />
+          </div>
+        </Fade>
       </div>
       <div className="btn-box">
-        <h4>Have a project in mind? Reach Out. <br /> let's build something together.</h4>
-        <Link to="/contact">
-          <button>How </button>
-        </Link>
+        <Fade left duration={2000}>
+          <h4>Have a project in mind? Reach Out. <br /> let's build something together.</h4>
+        </Fade>
+        <Fade right duration={2000}>
+          <Link to="/contact">
+            <button>Contact me</button>
+          </Link>
+        </Fade>
       </div>
     </div>
   )
