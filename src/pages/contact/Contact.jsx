@@ -57,6 +57,7 @@ const Contact = () => {
       setIsloading(true)
 
       setCurrentAnimation('hit')
+      toast.success("message sent!", toastOptions)
 
       emailjs.sendForm("service_typ0pbh", "template_bzf630o", form.current, "yZYjvSaCnhyflKnLl")
         .then((result) => {
