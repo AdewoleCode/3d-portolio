@@ -64,9 +64,9 @@ const Contact = () => {
           setIsloading(false)
           console.log(result.text);
           toast.success("message sent!", toastOptions)
-          name = ""
-          email = ""
-          message = ""
+          // name = ""
+          // email = ""
+          // message = ""
         }, (error) => {
           setIsloading(false)
           console.log(error.text);
