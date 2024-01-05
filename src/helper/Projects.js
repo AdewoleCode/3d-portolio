@@ -65,7 +65,7 @@ export const projectsArray = [
     id: 5,
     projectName: "Freelance Medic",
     imgUrl: freelanceMedic,
-    desc: "Get connected with top-rated medical facilities across the country, with a regularly updated database, so you can find he right asignment",
+    desc: "Get connected with top-rated medical facilities across the country, with a regularly updated database, so you can find the right asignment(IN PROGRESS...)",
     webUrl: "https://freelance-medic.onrender.com",
     gitHub: "https://freelance-medic.onrender.com",
     stacks: ["ReactJS", "Redux-Toolkit", "React-reveal"],
