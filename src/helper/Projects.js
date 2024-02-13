@@ -13,7 +13,7 @@ import digitalLanding from "../assets/project-img/digital-landing.png"
 import openEnterprise from "../assets/project-img/open-enterprise.png"
 import simpleshare from "../assets/project-img/simpleshare.png"
 import codeSnippet from "../assets/project-img/code.png"
-
+import booklist from "../assets/project-img/harry2.png"
 
 export const projectsArray = [
   {
@@ -27,6 +27,15 @@ export const projectsArray = [
   },
   {
     id: 1,
+    projectName: "Booklist",
+    imgUrl: booklist,
+    desc: "a web application to manage your reading list. search for your favorite books from a list of thousands of books from openLibrary.org's database and add to your reading list",
+    webUrl: "https://readinglist-lyng.onrender.com/",
+    gitHub: "https://readinglist-lyng.onrender.com/",
+    stacks: ["vite", "Typescript", "zustand","react-beautiful-dnd", "open library's API", "local storage"],
+  },
+  {
+    id: 2,
     projectName: "SimpleShare",
     imgUrl: simpleshare,
     desc: "A file sharing platform that lets you upload, organize and share files with friends. features includes password protection, share url, send file to email...(IN PROGRESS)",
@@ -35,7 +44,7 @@ export const projectsArray = [
     stacks: ["NextJs", "clerkJS", "Firebase", "React-Email"],
   },
   {
-    id: 2,
+    id: 3,
     projectName: "Brit Properties LTD",
     imgUrl: brit,
     desc: "Official website for Brit Properties Nigeria Ltd, a real estate company primarily based in lagos.",
@@ -44,7 +53,7 @@ export const projectsArray = [
     stacks: ["ReactJS", "Firebase", "Emailjs", "React-Carousel", "Django"],
   },
   {
-    id: 3,
+    id: 4,
     projectName: "AdeBookings",
     imgUrl: adeBooking,
     desc: "Adebookings is a booking web application solution for hotels/moteals. users can search for available properties in specified locations(abuja, lagos or bayelsa), filter based on price, input booking date, check for availablity and book a room in the hotel. single hotel page also features a carousel that displays more pictures of the selected property/hotel. backend consists of an application programming interface(API) that connects to a MongoDB database, it uses cookies and JsonWebToken for authentication",
@@ -53,7 +62,7 @@ export const projectsArray = [
     stacks: ["ReactJS", "NodeJS", "ExpressJS", "MongoDB", "Redux-Toolkit", "React-date-range", "BcryptJS", "JsonWebToken"],
   },
   {
-    id: 4,
+    id: 5,
     projectName: "Travelify",
     imgUrl: travel,
     desc: "Travelify is a social media web application where users can share their travel stories. all users can view travel diaries but only authenticated/registered users can create a diary entry, edit diary or delete diary",
@@ -62,7 +71,7 @@ export const projectsArray = [
     stacks: ["ReactJS", "NodeJS", "ExpressJS", "MongoDB", "Redux-Toolkit", "BcryptJS", "Material UI/Material UI Icons"],
   },
   {
-    id: 5,
+    id: 6,
     projectName: "Freelance Medic",
     imgUrl: freelanceMedic,
     desc: "Get connected with top-rated medical facilities across the country, with a regularly updated database, so you can find the right asignment(IN PROGRESS...)",
@@ -71,7 +80,7 @@ export const projectsArray = [
     stacks: ["ReactJS", "Redux-Toolkit", "React-reveal"],
   },
   {
-    id: 6,
+    id: 7,
     projectName: "Fooder",
     imgUrl: fooder,
     desc: "Fooder is food ordering web Application solution that makes ordering of food straightforward and easy, users can choose from a list of food categories, add food to cart, increase/decrease quantity of food items and checkout if they are registered/authenticated. Fooder also features an admin page to create and add a food item to the database. backend is an express API that connects to MongoDB database and it uses JsonWebToken for authentication",
@@ -80,7 +89,7 @@ export const projectsArray = [
     stacks: ["ReactJS", "NodeJS", "ExpressJS", "MongoDB", "Redux-Toolkit", "BcryptJS", "JsonWebToken"],
   },
   {
-    id: 7,
+    id: 8,
     projectName: "Brit Land Banking",
     imgUrl: britLandBanking,
     desc: "Official website for Brit Land Banking, a subsidiary of Brit Properties Nigeria Limited.",
@@ -89,7 +98,7 @@ export const projectsArray = [
     stacks: ["ViteJS", "EmailJS", "React-reveal"]
   },
   {
-    id: 8,
+    id: 9,
     projectName: "Spooky",
     imgUrl: spooky,
     desc: "Spooky is a real time chat app with a stylish, modern design that uses socket.io for message exchanges. users can also select from a list of dynamically generated avatars from api.multiavatar.com as avatar.",
@@ -98,7 +107,7 @@ export const projectsArray = [
     stacks: ["ReactJS", "NodeJS", "ExpressJS", "MongoDB", "Redux-Toolkit", "BcryptJS", "Socket.io"],
   },
   {
-    id: 9,
+    id: 10,
     projectName: "bStores",
     imgUrl: bas,
     desc: "an ecommerce store for children wears. users can add items to cart, increase quantity of items, visit a single item page, checkout. app also features stripe payment solution. backend is an headless cms that helps make ecomerce content much easier to manage",
@@ -107,7 +116,7 @@ export const projectsArray = [
     stacks: ["ReactJS", "strapi", "React-Carousel", "sql-Lite", "Redux-Toolkit", "Material UI"],
   },
   {
-    id: 10,
+    id: 11,
     projectName: "Coin Search",
     imgUrl: crypto,
     desc: "A crypto website with a easy to use, modern UI where any crypto enthusiast can go to check for crypto prices, current values, brief history, market ranks and more..",
@@ -116,7 +125,7 @@ export const projectsArray = [
     stacks: ["reactJS", "crypto Api", "TailwindCss"],
   },
   {
-    id: 11,
+    id: 12,
     projectName: "Multimart",
     imgUrl: multimart,
     desc: "A fully functioning E-commerce store with a nice, modern, easy to navigate User interface. users can add item to cart, filter or search for a particular products, create an account, checkout....",
@@ -125,7 +134,7 @@ export const projectsArray = [
     stacks: ["ReactJS", "Redux Toolkit", "Firebase"],
   },
   {
-    id: 12,
+    id: 13,
     projectName: "Bon Hotel",
     imgUrl: bonHotel,
     desc: "A landing page for Bon Hotel",
@@ -134,7 +143,7 @@ export const projectsArray = [
     stacks: ["ViteJS"],
   },
   {
-    id: 13,
+    id: 14,
     projectName: "Digital Landing",
     imgUrl: digitalLanding,
     desc: "A landing page for Digital Landing",
@@ -143,7 +152,7 @@ export const projectsArray = [
     stacks: ["ViteJS"],
   },
   {
-    id: 14,
+    id: 15,
     projectName: "Open Enterprise",
     imgUrl: openEnterprise,
     desc: "A landing page for Open Enterprise",
